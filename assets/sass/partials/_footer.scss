@@ -1,0 +1,124 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    background-image: url(/assets/img/bg_hero2.png); //misma imagen
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: 100% -45%;
+
+    .footer_content {
+        width: 1280px;
+        display: flex;
+        gap: 5rem;
+        margin-bottom: 4rem;
+        .footer_left {
+            width: 70%;
+            .footer_01 {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                margin-bottom: 2rem;
+                //primera parte hasta linea horizontal
+                .footer_logo {
+                    margin-bottom: 1rem;
+                    img {
+                        height: 40px;
+                    }
+                }
+                .footer_text {
+                    @include text_footerdesc;
+                    margin-bottom: 1rem;
+                }
+                .footer_socials {
+                    display: flex;
+                    gap: 1rem;
+                    @include text_footericons;
+                    
+                }
+            }
+            .linea { //como hacer la línea sacado de: https://parzibyte.me/blog/2019/08/19/dibujar-lineas-separadores-html-css/
+                border-top: 1px solid $linea;
+                height: 1px;
+                width: 800px;
+                padding: 0rem;
+                margin-bottom: 3rem;
+            }
+            .footer_02 {
+                display: flex;
+                margin-bottom: 2rem;
+                margin-top: 2rem;
+                width: 100%;
+                gap: 1rem;
+                .footer_column {
+                    width: 100%;
+                    .footer_column_title {
+                        @include text_footertitle;
+                        margin-bottom: 1.5rem;
+                    }
+                    .footer_column_items {
+                        @include text_xs;
+
+                        .footer_column_item {
+                            margin-bottom: 1rem;
+                            display: flex;
+                            gap: .5rem;
+                            .footer_column_green{
+                                display: none;
+                            }
+                            a {
+                                display: flex;
+                                gap: 0.5rem;
+                                .footer_column_item_icon {
+                                }
+                                .footer_column_item_text {
+                                }
+                            }
+                            &:hover {
+                                transition: all 500ms ease;
+                                color: $corporate_color;
+                            }
+                            &.active{
+                                .footer_column_green {
+                                    display: inline-block;
+                                    font-size: 2.5rem;
+                                    font-weight: bolder;
+                                    color: $modal_green;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .footer_03 {
+                display: flex;
+                gap: 5rem;
+                align-items: center;
+                .footer_03_left {
+                    flex-shrink: 0;
+                    .footer_03_text {
+                        @include text_copy;
+                    }
+                    .footer_03_logo {
+                        img {
+                            height: 40px;
+                        }
+                    }
+                }
+                .footer_03_right {
+                    .footer_03_text {
+                        //TODO: poner en párrafos
+                        @include text_copy;
+                    }
+                }
+            }
+        }
+        .footer_right {
+            width: 30%;
+            display: flex;
+            justify-content: flex-end;
+            img {
+                width: 300px;
+            }
+        }
+    }
+}

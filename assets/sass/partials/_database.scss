@@ -1,0 +1,46 @@
+
+.database{ //aquí empieza el database
+    display: flex;
+    justify-content: center;
+    margin-bottom: $espaciado_secciones;
+    .database_content{
+        width: 1280px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .database_title{
+            margin-bottom: 2rem;
+            @include text_xl;
+        }
+        .database_text{
+            width: 80ch;
+            margin-bottom: 6rem;
+            @include text_s;
+            text-align: center;
+        }
+        .database_list{
+            width: 100%; 
+            display: flex;
+            flex-wrap: wrap; //para que baje los elementos
+            background-color: $bg_box;
+            border-radius: 12px;
+            padding: 2rem;
+            @include text_xs_list;
+            .list_item{
+                display: flex;
+                align-items: center;
+                width: 33.3%; 
+                /*al poner wrap les doy una anchura de 33% para que 
+                cada uno de los elementos ocupe el 33,3% del padre
+                y así el wrap creará una fila por cada 3 elementos*/
+                padding: 1rem;
+                gap: 0.5rem;
+                .icon{
+                    display: flex;
+                    width: 25px;
+                }
+                .text{}
+            }
+        }
+    }
+}

@@ -1,0 +1,65 @@
+.review { //inicio parte de los comentarios
+    display: flex;
+    justify-content: center;
+    margin-bottom: $espaciado_secciones;
+
+    .review_content {
+        width: 1280px;
+
+        .review_title {
+            margin-bottom: 3rem; //centrar texto luego
+            @include text_xl;
+        }
+        .review_columns {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            width: 100%;
+            .review_column { //las tres columnas son iguales
+                width: 100%;
+                .review {
+                    display: flex;
+                    padding: 1.2rem;
+                    margin-bottom: 1rem;
+                    background-color: $bg_box;
+                    border-radius: 12px;
+                    gap: 1rem;
+
+                    .review_left {
+                        
+                        img {
+                            width: 40px;  
+                        }
+                    }
+                    .review_right {
+                        width: 100%;
+                        @include text_xxs;
+                        
+                        .review_top {
+                            display: flex;
+                            gap: 0.5rem;
+                            margin-bottom: 0.5rem;
+                            .review_name {
+                                @include review_name
+                            }
+                            .review_nickname {
+                                @include review_nickname
+                            }
+                            .review_point {
+                                @include review_point
+                            }
+                            .review_date {
+                                @include review_date
+                            }
+                        }
+                        .review_bottom {
+                            .review_bottom_text {
+                                @include review_text
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,39 @@
+
+.features{
+    display: flex;
+    justify-content: center;
+    margin-bottom: $espaciado_secciones;
+    .features_content{
+        width: 1280px;
+        .feature{
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+
+            &:nth-child(2n) { // pseudoselector
+                flex-direction: row-reverse;
+            }
+
+            .feature_img{
+                width: 100%;
+                padding: 1rem;
+                img{
+
+                }
+            }
+            .feature_text{
+                width: 100%;
+                padding: 1rem;
+                .feature_tittle{
+                    @include text_m;
+                    margin-bottom: 1rem;
+                }
+                .feature_p{
+                    @include text_s;
+
+                }
+
+            }
+        }
+    }
+}

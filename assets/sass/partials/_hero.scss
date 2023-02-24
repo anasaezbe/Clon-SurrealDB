@@ -1,0 +1,64 @@
+//esto es el hero, el texto de presentación
+
+.hero {
+    //display: flex;
+    //justify-content: center;
+    @include centrar; 
+    // mixin para centrar, permite quitar lo que ha quedado comentado
+    margin-bottom: $espaciado_secciones;
+ 
+
+
+    .hero_content {
+        //width: 1280px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-image: url(/assets/img/bg_hero2.png);
+        background-repeat: no-repeat;
+        background-size: 95%;
+        background-position: -25% 180%;
+
+        .hero_left {
+            //width: 65%; //para que el texto ocupe un porcentaje de la pantalla
+            padding-right: 2rem;
+            .hero_left_text {
+                img {
+                    display: inline; 
+                    /*porque en el texto no está escrito sino que es una foto, 
+                    display inline para que no salte de línea y parezca 
+                    texto corrido*/
+                    height: 3rem;
+                }
+                .hero_title {
+                    margin-bottom: 1.5rem;
+                    @include text_hero_special;
+
+                    .hero_special_destacado{
+                       @include degradado;
+                    }
+                    
+                }
+               
+                .hero_subtitle {
+                    margin-bottom: 1.5rem;
+                    @include subtitle_hero_special;
+                }
+                .hero_text {
+                    margin-bottom: 2rem;
+                    @include text_s;
+                    max-width: 75ch;
+                }
+            }
+            .hero_left_cta {
+                display: flex;
+                gap: 1rem;
+            }
+        }
+        .hero_right {
+            //width: 35%; //el tamaño de la foto, por no poner píxeles específicos
+            img {
+            }
+        }
+    }
+}

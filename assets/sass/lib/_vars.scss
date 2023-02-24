@@ -1,0 +1,34 @@
+$font_family_base: 'Source Sans Pro', 'Helvetica', Arial, sans_serif;
+$font_size_base: 1rem;
+$font_weight_base: normal;
+$line_height_base: 1.5rem;
+$body_color: #333;
+$body_bg: #fff;
+$link_color: #345c8d; 
+$link_decoration: none; 
+$link_hover_color: darken($link_color, 10%); 
+$link_hover_decoration: none; 
+$table_cell_padding: .5em; 
+
+//a partir de aquí añado yo mis variables//
+
+$espaciado_secciones: 9rem;
+/*espaciado entre cada una de las secciones en las que se 
+ha dividido la página, se puede ver en todos los partials*/
+
+
+$texto_blanco: #fff;
+$texto_gris: #aeb8ca;
+$bg_color: #171a21;
+$bg_box: #222632; 
+/*las cajas dentro de la página que tienen un color más 
+clarito que el fondo, que se ponen para ayudar a diferenciar
+los espacios gaps y por donde va la caja*/
+$linea: #333641; 
+$corporate_color: #ff009e;  
+$secondary_color: #8700ff;
+$modal_green: #00f663;
+$modal_red: $corporate_color;
+
+
+

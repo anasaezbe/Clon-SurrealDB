@@ -1,0 +1,49 @@
+//inicio de simplify
+.simplify{
+    display: flex;
+    justify-content: center;
+    margin-bottom: $espaciado_secciones;
+    .simplify_content{
+        width: 1280px;
+        .simplify_top{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 1rem;
+
+            .simplify_title{                
+                margin-bottom: 1.5rem;
+                @include text_xl; //en tipografía se justifica el texto al centro
+                img {
+                    display: inline; 
+                    /*porque en el texto no está escrito sino que es una foto, 
+                    display inline para que no salte de línea y parezca 
+                    texto corrido*/
+                    height: 1.8rem;
+                }
+            }
+            .simplify_text{
+                width: 80ch;
+                margin-bottom: 1.5rem;
+                @include text_s;
+                text-align: center;
+
+            }
+            .square_cta{
+                margin-bottom: 3rem;
+                .label{
+
+                }
+            }
+        }
+        .simplify_bottom{            
+            display: flex;
+            justify-content: center;
+            @include degradado_plano;
+            border-radius: 16px;
+            img {
+            }
+        }
+    }
+
+}

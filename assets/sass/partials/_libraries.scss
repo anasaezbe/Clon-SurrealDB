@@ -1,0 +1,89 @@
+.libraries {
+    display: flex;
+    justify-content: center;
+    margin-bottom: $espaciado_secciones;
+    .libraries_content {
+        width: 1280px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .libraries_title {
+            margin-bottom: 1.5rem;
+            @include text_xl;
+        }
+        .libraries_text {
+            margin-bottom: 4rem;
+            @include text_s;
+            width: 80ch;
+            text-align: center;
+        }
+        .libraries_list {
+            display: flex;
+            gap: 1rem;
+            width: 100%;
+            
+            .libraries_column {
+            width: 100%;
+                
+                .librarie_item {
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 1rem;                    
+                    padding: 1rem;
+                    //no consigo p oner la anchura de mitad de pantalla
+                    .item_top {
+                        display: flex;
+                        align-items: center;
+                        gap: 1rem;
+                        margin-bottom: 1.5rem;
+                        .item_top_icon {
+                            @include text_m;
+                         
+                        }
+                        .item_top_name {
+                            @include text_m;
+                            font-weight: bold;
+                        }
+                        .item_button {
+                        }
+                    }
+                    .code{
+                        margin-bottom: 2.5rem;
+                        background-color: $bg_box;
+                        border-radius: 1rem;
+                        padding: 1.5rem;
+                        @include monospaced;
+                        .color{
+                            color: #ffff00;
+                        }
+                        .color01{
+                            color: #adff2f;
+                        }
+                        .color02{
+                            color: #66d1ff;
+                        }
+                        .color03{
+                            color: $corporate_color;
+                        }                        
+                        
+                    }
+                    .item_bottom {
+                        display: flex;
+                        gap: .3rem;
+                        .item_bottom_text {
+                            @include text_copy;
+                            
+                        }
+                        .item_bottom_point{
+                            font-weight: 800;
+                        }
+                        .item_bottom_point{
+                            @include text_copy;
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

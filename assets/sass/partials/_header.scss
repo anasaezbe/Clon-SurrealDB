@@ -1,0 +1,55 @@
+
+//esto es el inicio del header
+.header {
+    @include centrar;
+    //margin-bottom: $espaciado_secciones; 
+    margin-bottom: 6rem; //quito la variable espaciado secciones porque es especial
+    margin-top: 3rem;
+    .header_content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include text_xxs;
+
+        .header_left {
+            display: flex; 
+            align-items: center; 
+            /*para que la imagen del logo quede centrada en el contenedor 
+            pongo display flex aunque solo haya una imagen y así poder poner 
+            align-items center y que sea el tamaño que sea quede centrada con 
+            los botones del otro lado*/
+            img{
+                height: 45px;
+            }
+        }
+      
+        .header_right {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+
+            .header_menu {
+                display: flex;
+                gap: 2rem;
+
+                .header_menu_item {
+                    padding: .5rem 0;
+                    border-bottom: 3px solid transparent;  
+                    color: $texto_gris;
+                    .icon{}
+                    .label{}
+                    &.active, &:hover{
+                        border-bottom: 3px solid $corporate_color; 
+                        color: white; 
+                        transition: all 350ms ease;
+                    }                  
+                }
+            }
+            .header_cta { //los ctas quedan definidos a parte
+                display: flex;
+                gap: 2rem;
+                
+            }
+        }
+    }
+} //end of header

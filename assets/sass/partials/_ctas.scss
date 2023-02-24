@@ -1,0 +1,80 @@
+//cta
+.cta_01 {
+    box-shadow: 0px 0px 20px rgba(255, 0, 158, 0.5);
+    background: linear-gradient(135deg, $corporate_color, $secondary_color);
+    //encontrado en w3s para hacer degradados en ángulo https://www.w3schools.com/cssref/func_linear-gradient.asp
+    border-radius: 99999999px;
+    padding: .25rem;
+    @include text_cta;
+
+    .cta_holder {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 1.5rem;
+        border-radius: 999999999px;
+       
+            .icon {
+            }
+            .label {
+            }        
+    }
+
+    &:hover{
+        box-shadow: 0px 0px 50px rgba(255, 0, 158, 0.7);
+        transition: all 500ms ease;
+        .icon{
+            @include degradado;
+            transition: all 500ms ease;
+
+        }
+    }
+
+    &.special {
+        //botones con outline
+        .cta_holder {
+            background-color: $bg_color;
+        }
+    }
+
+    &.small {
+        font-size: .9rem;
+        padding: .2rem;        
+        box-shadow: none;
+        .cta_holder{
+            padding: .2rem 1.5rem;
+        }
+        &:hover{
+            box-shadow: 0px 0px 50px rgba(255, 0, 158, 0.7);
+        }
+        //añado dentro del small porque lo he quitado en el estado normal
+        //asi que tengo que añadirlo específicamente
+    
+    }
+
+    &.reverse {
+        .cta_holder {
+            flex-direction: row-reverse;
+        }
+    }
+}
+
+//los botones cuadrados de COMING SOON y AVAILABLE
+
+.square_cta {
+    border-radius: .25rem;
+    &.red {
+        border: 0.1rem solid $modal_red;
+        color: $modal_red;
+        font-size: .8rem;
+        font-weight: 600;
+        padding: 0.25rem 0.5rem;
+    }
+    &.green {
+        border: 0.1rem solid $modal_green;
+        color: $modal_green;
+        font-size: .8rem;
+        font-weight: 600;
+        padding: 0.25rem 0.5rem;
+    }
+}

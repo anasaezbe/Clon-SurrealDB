@@ -1,0 +1,158 @@
+//MIXINS CONSTRUCTIVOS//
+
+@mixin centrar() { //mixin para centrar todas las cajas
+    display: flex;
+    justify-content: center;
+    > div { // este simbolo > significa el hijo de 
+        width: 1280px;
+    }
+}
+
+//MIXINS TIPOGRÁFICOS//
+
+@mixin text_xl() { //titulo sección
+    font-size: 2.4rem;
+    line-height: 2rem; //siempre multiplo de 4 (1rem=16px)
+    color: $texto_blanco;
+    font-weight: bold;
+    text-align: center;
+}
+@mixin text_l() { //titulo subsección
+    font-size: 1.9rem;
+    line-height: 2rem; //siempre multiplo de 4 (1rem=16px)
+    color: $texto_blanco;
+}
+@mixin text_m() { //texto de features
+    font-size: 1.75rem;
+    line-height: 2rem; //siempre multiplo de 4 (1rem=16px)
+    color: $texto_blanco;
+    font-weight: bold;
+}
+@mixin text_s() { //texto corrido
+    font-size: 1.2rem;
+    line-height: 2rem;
+    color: $texto_gris;
+}
+@mixin text_xs() { //listas de elementos, texto pequeño corrido, footer
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    color: $texto_gris;
+}
+
+@mixin text_xs_list() { //listas de elementos
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    color: $texto_blanco;
+}
+
+@mixin text_xxs() { //texto comentarios, menú 
+    font-size: .9rem;
+    line-height: 1rem;
+    color: $texto_blanco;
+}
+//textos especiales del hero
+@mixin text_hero_special() { //excepción de tamaño hero
+    font-size: 4.2rem;
+    line-height: 4.5rem;
+    font-weight: bold;     
+    color: $texto_blanco;
+}
+
+@mixin subtitle_hero_special() { //excepción de tamaño subtitulo hero
+    font-size: 1.9rem;
+    line-height: 2rem;   
+    font-weight: bold;
+    color: $texto_blanco;
+}
+//textos especiales ctas
+@mixin text_cta() { 
+    //como hacer excepción para ctas mas pequeños menu
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    color: $texto_blanco;
+}
+//textos especiales footer
+
+
+@mixin text_footerdesc() { //listas de elementos, texto pequeño corrido, footer
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    color: $texto_blanco;
+}
+
+@mixin text_footericons() { //listas de elementos, texto pequeño corrido, footer
+    font-size: 1.6rem;
+    line-height: 1.5rem;
+    color: $texto_gris;
+}
+
+@mixin text_footertitle() { //texto comentarios, menú 
+    font-size: 1.1rem;
+    line-height: 1rem;
+    color: $texto_blanco;
+    font-weight: bold;
+}
+
+@mixin text_copy() { //texto final copywright
+    font-size: .85rem;
+    line-height: 1.3rem;
+    color: $texto_gris;
+}
+
+//textos especiales comentarios
+@mixin review_name{
+    font-size: .9rem;
+    line-height: 1rem;    
+    color: $texto_blanco;
+    font-weight: bold;
+}
+
+@mixin review_nickname{
+    font-size: .9rem;
+    line-height: 1rem;
+    color: $texto_gris;
+    font-weight: bold;
+}
+
+@mixin review_point{
+    font-size: .9rem;
+    line-height: 1rem;
+    color: $texto_gris;
+}
+
+
+@mixin review_date{
+    font-size: .9rem;
+    line-height: 1rem;
+    color: $texto_gris;
+}
+
+@mixin review_text{
+    font-size: .9rem;
+    line-height: 1.3rem;
+}
+
+
+@mixin degradado {    
+   background: linear-gradient(135deg, $corporate_color, $secondary_color);
+    //encontrado en w3s para hacer degradados en ángulo https://www.w3schools.com/cssref/func_linear-gradient.asp
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    //explicación encontrada en https://javiniguez.com/texto-con-degradado-de-color-en-css/
+}
+
+//este primer degradado es para los textos e iconos
+
+@mixin degradado_plano {
+    background: linear-gradient(135deg, $corporate_color, $secondary_color);
+}
+
+//este segundo degradado es para los colores planos (degradado en texto o icono no)
+
+@mixin monospaced {
+    font-family: monospace;
+    white-space: pre;
+    word-break: keep-all;
+    font-size: 1rem;
+    line-height: 1rem;
+}

@@ -1,0 +1,32 @@
+.farewell{ //parte de la despedida final
+    display: flex;
+    justify-content: center;
+    margin-bottom: $espaciado_secciones;
+    .farewell_content{
+        width: 1280px;
+
+        .farewell_title{
+            text-align: center; 
+            //alineo texto para no tener que hacer mas divs innecesarios
+            margin-bottom: 1.5rem;
+            @include text_xl;
+            img {
+                display: inline; 
+                /*porque en el texto no está escrito sino que es una foto, 
+                display inline para que no salte de línea y parezca 
+                texto corrido*/
+                height: 1.8rem;
+            }
+        }
+        .farewell_text{
+            text-align: center;
+            margin-bottom: 1.5rem;
+            @include text_s;
+        }
+        .farewell_ctas{
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+    }
+}
